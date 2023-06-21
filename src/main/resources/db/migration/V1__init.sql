@@ -27,7 +27,9 @@ CREATE TABLE IF NOT EXISTS  tutor(
   alternative VARCHAR(50),
   tu_status BOOLEAN,
   is_main BOOLEAN,
-  PRIMARY KEY (id)
+  company_id int,
+  PRIMARY KEY (id),
+  FOREIGN KEY (company_id) references company (id)
 );
 
 CREATE TABLE IF NOT EXISTS  company(
@@ -37,9 +39,7 @@ CREATE TABLE IF NOT EXISTS  company(
   contact VARCHAR(100),
   coordinates VARCHAR(30),
   co_status BOOLEAN,
-  tutor_id int not null,
-  PRIMARY KEY (id),
-  FOREIGN KEY (tutor_id) references tutor(id)
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS  teacher(
