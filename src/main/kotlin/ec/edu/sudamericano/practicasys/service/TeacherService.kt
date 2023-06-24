@@ -1,9 +1,9 @@
-package net.magbdigital.sudapractic.service
+package ec.edu.sudamericano.practicasys.service
 
-import net.magbdigital.sudapractic.model.*
-import net.magbdigital.sudapractic.repository.StudentRepository
-import net.magbdigital.sudapractic.repository.TeacherRepository
-import net.magbdigital.sudapractic.repository.TeacherViewRepository
+import ec.edu.sudamericano.practicasys.model.*
+import ec.edu.sudamericano.practicasys.repository.StudentRepository
+import ec.edu.sudamericano.practicasys.repository.TeacherRepository
+import ec.edu.sudamericano.practicasys.repository.TeacherViewRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

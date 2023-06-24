@@ -1,6 +1,6 @@
-package net.magbdigital.sudapractic.repository
+package ec.edu.sudamericano.practicasys.repository
 
-import net.magbdigital.sudapractic.model.Carrera
+import ec.edu.sudamericano.practicasys.model.Carrera
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface CarreraRepository: JpaRepository<Carrera, Long?> {

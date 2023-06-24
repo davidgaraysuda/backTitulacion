@@ -1,8 +1,9 @@
-package net.magbdigital.sudapractic.service
-import net.magbdigital.sudapractic.model.Agreement
-import net.magbdigital.sudapractic.model.AgreementView
-import net.magbdigital.sudapractic.repository.AgreementRepository
-import net.magbdigital.sudapractic.repository.AgreementViewRepository
+package ec.edu.sudamericano.practicasys.service
+
+import ec.edu.sudamericano.practicasys.model.Agreement
+import ec.edu.sudamericano.practicasys.model.AgreementView
+import ec.edu.sudamericano.practicasys.repository.AgreementRepository
+import ec.edu.sudamericano.practicasys.repository.AgreementViewRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

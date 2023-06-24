@@ -1,9 +1,9 @@
-package net.magbdigital.sudapractic.service
+package ec.edu.sudamericano.practicasys.service
 
-import net.magbdigital.sudapractic.dto.PracticeDetailDto
-import net.magbdigital.sudapractic.model.ActivityDetailView
-import net.magbdigital.sudapractic.model.PracticeDetail
-import net.magbdigital.sudapractic.repository.PracticeDetailRepository
+import ec.edu.sudamericano.practicasys.dto.PracticeDetailDto
+import ec.edu.sudamericano.practicasys.model.ActivityDetailView
+import ec.edu.sudamericano.practicasys.model.PracticeDetail
+import ec.edu.sudamericano.practicasys.repository.PracticeDetailRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.text.SimpleDateFormat

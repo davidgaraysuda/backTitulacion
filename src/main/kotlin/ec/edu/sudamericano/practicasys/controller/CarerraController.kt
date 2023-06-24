@@ -1,7 +1,7 @@
-package net.magbdigital.sudapractic.controller
-import net.magbdigital.sudapractic.model.*
-import net.magbdigital.sudapractic.service.CarreraService
-import net.magbdigital.sudapractic.service.StudentService
+package ec.edu.sudamericano.practicasys.controller
+import ec.edu.sudamericano.practicasys.model.*
+import ec.edu.sudamericano.practicasys.service.CarreraService
+import ec.edu.sudamericano.practicasys.service.StudentService
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*

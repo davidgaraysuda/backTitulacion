@@ -1,6 +1,6 @@
-package net.magbdigital.sudapractic.repository
+package ec.edu.sudamericano.practicasys.repository
 
-import net.magbdigital.sudapractic.model.Activity
+import ec.edu.sudamericano.practicasys.model.Activity
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface ActivityRepository: JpaRepository<Activity, Long?> {

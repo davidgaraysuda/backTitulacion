@@ -1,7 +1,7 @@
-package net.magbdigital.sudapractic.repository
+package ec.edu.sudamericano.practicasys.repository
 
-import net.magbdigital.sudapractic.model.Company
-import net.magbdigital.sudapractic.model.Student
+import ec.edu.sudamericano.practicasys.model.Company
+import ec.edu.sudamericano.practicasys.model.Student
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface CompanyRepository: JpaRepository<Company, Long?> {

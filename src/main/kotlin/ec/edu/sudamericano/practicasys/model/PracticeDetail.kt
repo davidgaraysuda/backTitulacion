@@ -1,4 +1,4 @@
-package net.magbdigital.sudapractic.model
+package ec.edu.sudamericano.practicasys.model
 
 import java.sql.Time
 import java.util.*

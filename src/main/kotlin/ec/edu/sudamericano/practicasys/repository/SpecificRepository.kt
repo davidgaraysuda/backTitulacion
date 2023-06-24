@@ -1,6 +1,6 @@
-package net.magbdigital.sudapractic.repository
+package ec.edu.sudamericano.practicasys.repository
 
-import net.magbdigital.sudapractic.model.Specific
+import ec.edu.sudamericano.practicasys.model.Specific
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface SpecificRepository: JpaRepository<Specific, Long?> {

@@ -1,7 +1,4 @@
-package net.magbdigital.sudapractic.model
-
-import java.util.*
-import javax.persistence.*
+package ec.edu.sudamericano.practicasys.model
 
 @Entity
 @Table(name="activity_detail_view")

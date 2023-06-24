@@ -1,7 +1,4 @@
-package net.magbdigital.sudapractic.controller
-import net.magbdigital.sudapractic.model.Activity
-import net.magbdigital.sudapractic.model.ActivityView
-import net.magbdigital.sudapractic.service.ActivityService
+package ec.edu.sudamericano.practicasys.controller
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*

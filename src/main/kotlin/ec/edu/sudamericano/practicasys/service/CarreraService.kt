@@ -1,6 +1,7 @@
-package net.magbdigital.sudapractic.service
-import net.magbdigital.sudapractic.model.*
-import net.magbdigital.sudapractic.repository.CarreraRepository
+package ec.edu.sudamericano.practicasys.service
+
+import ec.edu.sudamericano.practicasys.model.*
+import ec.edu.sudamericano.practicasys.repository.CarreraRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

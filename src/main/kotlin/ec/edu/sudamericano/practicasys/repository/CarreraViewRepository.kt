@@ -1,7 +1,7 @@
-package net.magbdigital.sudapractic.repository
+package ec.edu.sudamericano.practicasys.repository
 
-import net.magbdigital.sudapractic.model.Carrera
-import net.magbdigital.sudapractic.model.CarreraView
+import ec.edu.sudamericano.practicasys.model.Carrera
+import ec.edu.sudamericano.practicasys.model.CarreraView
 import org.springframework.data.jpa.repository.JpaRepository
 
 

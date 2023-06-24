@@ -1,6 +1,7 @@
-package net.magbdigital.sudapractic.controller
-import net.magbdigital.sudapractic.model.*
-import net.magbdigital.sudapractic.service.AgreementService
+package ec.edu.sudamericano.practicasys.controller
+
+import ec.edu.sudamericano.practicasys.*
+import ec.edu.sudamericano.practicasys.AgreementService
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*

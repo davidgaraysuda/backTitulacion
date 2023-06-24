@@ -1,11 +1,11 @@
-package net.magbdigital.sudapractic.controller
+package ec.edu.sudamericano.practicasys.controller
 
-import net.magbdigital.sudapractic.model.Carrera
-import net.magbdigital.sudapractic.model.Company
-import net.magbdigital.sudapractic.model.CompanyView
-import net.magbdigital.sudapractic.model.Student
-import net.magbdigital.sudapractic.service.CompanyService
-import net.magbdigital.sudapractic.service.StudentService
+import ec.edu.sudamericano.practicasys.model.Carrera
+import ec.edu.sudamericano.practicasys.model.Company
+import ec.edu.sudamericano.practicasys.model.CompanyView
+import ec.edu.sudamericano.practicasys.model.Student
+import ec.edu.sudamericano.practicasys.service.CompanyService
+import ec.edu.sudamericano.practicasys.service.StudentService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.bind.annotation.DeleteMapping

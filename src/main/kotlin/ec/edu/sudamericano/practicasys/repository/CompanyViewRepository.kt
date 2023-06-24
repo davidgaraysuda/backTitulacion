@@ -1,6 +1,6 @@
-package net.magbdigital.sudapractic.repository
+package ec.edu.sudamericano.practicasys.repository
 
-import net.magbdigital.sudapractic.model.CompanyView
+import ec.edu.sudamericano.practicasys.model.CompanyView
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface CompanyViewRepository: JpaRepository<CompanyView, Long?> {

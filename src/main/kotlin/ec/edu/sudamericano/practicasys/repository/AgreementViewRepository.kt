@@ -1,7 +1,7 @@
-package net.magbdigital.sudapractic.repository
+package ec.edu.sudamericano.practicasys.repository
 
 
-import net.magbdigital.sudapractic.model.AgreementView
+import ec.edu.sudamericano.practicasys.model.AgreementView
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface AgreementViewRepository: JpaRepository<AgreementView, Long?> {

@@ -1,8 +1,9 @@
-package net.magbdigital.sudapractic.service
-import net.magbdigital.sudapractic.model.Activity
-import net.magbdigital.sudapractic.model.ActivityView
-import net.magbdigital.sudapractic.repository.ActivityRepository
-import net.magbdigital.sudapractic.repository.ActivityViewRepository
+package ec.edu.sudamericano.practicasys.service
+
+import ec.edu.sudamericano.practicasys.model.Activity
+import ec.edu.sudamericano.practicasys.model.ActivityView
+import ec.edu.sudamericano.practicasys.repository.ActivityRepository
+import ec.edu.sudamericano.practicasys.repository.ActivityViewRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

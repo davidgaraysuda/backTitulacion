@@ -1,8 +1,8 @@
-package net.magbdigital.sudapractic.service
+package ec.edu.sudamericano.practicasys.service
 
-import net.magbdigital.sudapractic.model.Tutor
-import net.magbdigital.sudapractic.repository.CompanyRepository
-import net.magbdigital.sudapractic.repository.TutorRepository
+import ec.edu.sudamericano.practicasys.model.Tutor
+import ec.edu.sudamericano.practicasys.repository.CompanyRepository
+import ec.edu.sudamericano.practicasys.repository.TutorRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
