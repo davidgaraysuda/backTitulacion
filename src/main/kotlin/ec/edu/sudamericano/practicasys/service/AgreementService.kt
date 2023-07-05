@@ -2,6 +2,7 @@ package ec.edu.sudamericano.practicasys.service
 
 import ec.edu.sudamericano.practicasys.model.Agreement
 import ec.edu.sudamericano.practicasys.model.AgreementView
+import ec.edu.sudamericano.practicasys.model.dto.AgreementReportsDto
 import ec.edu.sudamericano.practicasys.repository.AgreementRepository
 import ec.edu.sudamericano.practicasys.repository.AgreementViewRepository
 import org.springframework.beans.factory.annotation.Autowired
@@ -23,6 +24,15 @@ class AgreementService {
 
     fun listFull(): List<AgreementView> {
         return agreementViewRepository.findAll()
+    }
+
+    fun reportsAgreement():AgreementReportsDto{
+        val response= AgreementReportsDto().apply {
+            expired= agreementRepository.countAgreements()
+            //soon=agreementRepository.getTotalSoon()
+            //current=agreementRepository.getTotalCurrents()
+        }
+        return response
     }
 
     fun save(agreement : Agreement ):Agreement {

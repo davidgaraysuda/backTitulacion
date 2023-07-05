@@ -3,6 +3,7 @@ package ec.edu.sudamericano.practicasys.controller
 import ec.edu.sudamericano.practicasys.*
 import ec.edu.sudamericano.practicasys.model.Agreement
 import ec.edu.sudamericano.practicasys.model.AgreementView
+import ec.edu.sudamericano.practicasys.model.dto.AgreementReportsDto
 import ec.edu.sudamericano.practicasys.service.AgreementService
 
 import org.springframework.beans.factory.annotation.Autowired
@@ -24,6 +25,11 @@ class AgreementController {
     @GetMapping("/full")
     fun listFull(): List<AgreementView>{
         return agreementService.listFull()
+    }
+
+    @GetMapping("/reports")
+    fun reportsAgreement(): AgreementReportsDto{
+        return agreementService.reportsAgreement()
     }
 
     @GetMapping("/{id}")
