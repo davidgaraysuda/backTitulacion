@@ -1,7 +1,7 @@
-package net.magbdigital.sudapractic.dto
+package ec.edu.sudamericano.practicasys.dto
 
-import net.magbdigital.sudapractic.model.ActivityDetailView
-import net.magbdigital.sudapractic.model.PracticeDetail
+import ec.edu.sudamericano.practicasys.model.ActivityDetailView
+
 
 class DatosReporteDto {
     var nombreCompleto: String = ""

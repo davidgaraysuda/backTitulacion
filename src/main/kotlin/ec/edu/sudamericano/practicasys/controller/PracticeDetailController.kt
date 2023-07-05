@@ -2,8 +2,6 @@ package ec.edu.sudamericano.practicasys.controller
 
 import ec.edu.sudamericano.practicasys.model.*
 import ec.edu.sudamericano.practicasys.service.PracticeDetailService
-import ec.edu.sudamericano.practicasys.service.StudentService
-import ec.edu.sudamericano.practicasys.service.PracticeService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 

@@ -2,11 +2,10 @@ package ec.edu.sudamericano.practicasys.controller
 
 import ec.edu.sudamericano.practicasys.dto.PracticeReportDto
 import ec.edu.sudamericano.practicasys.model.*
-import ec.edu.sudamericano.practicasys.service.StudentService
 import ec.edu.sudamericano.practicasys.service.PracticeService
+
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
-import java.util.Date
 
 @RestController
 @RequestMapping("/practices")
@@ -26,7 +25,7 @@ class PracticeController {
         return practiceService.listByStudent (studentId)
     }
     @GetMapping("/{id}/week/{dateStart}/{dateEnd}")
-    fun listByWeek(@PathVariable("id") id: Long,@PathVariable("dateStart") dateStart: String,@PathVariable("dateEnd") dateEnd: String): PracticeReportDto{
+    fun listByWeek(@PathVariable("id") id: Long,@PathVariable("dateStart") dateStart: String,@PathVariable("dateEnd") dateEnd: String): PracticeReportDto {
         return practiceService.listWeekPractice (id,dateStart,dateEnd)
     }
     @GetMapping("/{id}")

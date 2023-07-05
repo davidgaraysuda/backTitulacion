@@ -1,7 +1,7 @@
 package ec.edu.sudamericano.practicasys.model
 
-import java.sql.Date
-import javax.persistence.*
+import jakarta.persistence.*
+import java.util.*
 
 @Entity
 @Table(name="agreement")
@@ -18,7 +18,8 @@ class Agreement {
     var endDate: Date? = null
     @Column(name = "ag_status")
     var agStatus: Boolean? = null
-    var link: String? = null
+    @Column(name = "link_doc")
+    var linkDoc: String? = null
 
     @Column(name = "company_id")
     var companyId: Long? = null

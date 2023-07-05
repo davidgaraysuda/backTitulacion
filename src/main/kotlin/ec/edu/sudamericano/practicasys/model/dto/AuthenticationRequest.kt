@@ -1,4 +1,4 @@
-package com.example.demo.dto
+package ec.edu.sudamericano.practicasys.dto
 
 class AuthenticationRequest {
     var username: String? = null

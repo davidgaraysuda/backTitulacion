@@ -1,6 +1,6 @@
 package ec.edu.sudamericano.practicasys.model
 
-import javax.persistence.*
+import jakarta.persistence.*
 
 @Entity
 @Table(name="tutor_view")
@@ -11,12 +11,11 @@ class TutorView {
     var id: Long? = null
 
     var name:String? = null
-    var email:String? = null
     var phone:String? = null
     var alternative:String? = null
-    var status: Boolean? = null
+    @Column(name="tu_status")
+    var tuStatus:Boolean? = null
     @Column(name="company_id")
     var companyId: Long? = null
-    var empresa:String? = null
-
+    var company:String? = null
 }

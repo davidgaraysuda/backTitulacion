@@ -1,5 +1,8 @@
 package ec.edu.sudamericano.practicasys.controller
 
+import ec.edu.sudamericano.practicasys.model.Activity
+import ec.edu.sudamericano.practicasys.model.ActivityView
+import ec.edu.sudamericano.practicasys.service.ActivityService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 

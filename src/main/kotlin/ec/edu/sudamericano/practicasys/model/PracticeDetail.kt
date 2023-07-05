@@ -2,7 +2,7 @@ package ec.edu.sudamericano.practicasys.model
 
 import java.sql.Time
 import java.util.*
-import javax.persistence.*
+import jakarta.persistence.*
 
 @Entity
 @Table(name = "practice_detail")

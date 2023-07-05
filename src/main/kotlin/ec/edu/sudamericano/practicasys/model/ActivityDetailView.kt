@@ -1,5 +1,7 @@
 package ec.edu.sudamericano.practicasys.model
 
+import jakarta.persistence.*
+
 @Entity
 @Table(name="activity_detail_view")
 class ActivityDetailView {

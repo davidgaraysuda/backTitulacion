@@ -1,7 +1,6 @@
 package ec.edu.sudamericano.practicasys.service
 
 import ec.edu.sudamericano.practicasys.dto.PracticeDetailDto
-import ec.edu.sudamericano.practicasys.model.ActivityDetailView
 import ec.edu.sudamericano.practicasys.model.PracticeDetail
 import ec.edu.sudamericano.practicasys.repository.PracticeDetailRepository
 import org.springframework.beans.factory.annotation.Autowired

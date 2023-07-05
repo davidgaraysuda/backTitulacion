@@ -1,12 +1,12 @@
 package ec.edu.sudamericano.practicasys.model
 
-import javax.persistence.*
+import jakarta.persistence.*
 
 @Entity
 @Table(name="activity")
 class Activity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
+    @jakarta.persistence.Id
     @Column(updatable = false)
     var id: Long? = null
     var description:String? = null

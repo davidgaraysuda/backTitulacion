@@ -20,6 +20,17 @@ CREATE TABLE IF NOT EXISTS  student(
     FOREIGN KEY (career_id) references career (id)
 );
 
+CREATE TABLE IF NOT EXISTS  company(
+  id serial,
+  name VARCHAR(45) NOT NULL,
+  phone VARCHAR(12),
+  contact VARCHAR(100),
+  coordinates VARCHAR(200),
+  co_status BOOLEAN,
+  PRIMARY KEY (id)
+);
+
+
 CREATE TABLE IF NOT EXISTS  tutor(
   id serial,
   name VARCHAR(45) NOT NULL,
@@ -30,16 +41,6 @@ CREATE TABLE IF NOT EXISTS  tutor(
   company_id int,
   PRIMARY KEY (id),
   FOREIGN KEY (company_id) references company (id)
-);
-
-CREATE TABLE IF NOT EXISTS  company(
-  id serial,
-  name VARCHAR(45) NOT NULL,
-  phone VARCHAR(12),
-  contact VARCHAR(100),
-  coordinates VARCHAR(30),
-  co_status BOOLEAN,
-  PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS  teacher(
@@ -85,11 +86,12 @@ CREATE TABLE IF NOT EXISTS practice_detail(
     observations varchar (200),
     practice_id int,
     PRIMARY KEY (id),
-    FOREIGN KEY (practice_id) REFERENCES practice (id),
+    FOREIGN KEY (practice_id) REFERENCES practice (id)
 );
+
 CREATE TABLE IF NOT EXISTS activity_detail(
     id serial,
-    description,
+    description varchar(200),
     activities_id int,
     detail_id int,
     checking boolean,
@@ -103,20 +105,19 @@ id serial primary key,
 start_date date not null,
 end_date date not null,
 ag_status boolean not null,
-link varchar (200),
+link_doc varchar (200),
 company_id int not null,
 foreign key (company_id) references company(id)
 );
 
 create table if not exists specific_agreement(
 id serial primary key,
+link_sdoc varchar (200),
 sag_status boolean not null,
 agreement_id int not null,
 career_id int not null,
-teacher_id int not null,
 foreign key (agreement_id) references agreement(id),
-foreign key (career_id) references career(id),
-foreign key (teacher_id) references teacher(id)
+foreign key (career_id) references career(id)
 );
 
 

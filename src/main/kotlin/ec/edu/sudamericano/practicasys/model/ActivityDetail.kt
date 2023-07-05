@@ -1,7 +1,6 @@
 package ec.edu.sudamericano.practicasys.model
 
-import java.util.Date
-import javax.persistence.*
+import jakarta.persistence.*
 
 @Entity
 @Table(name="activity_detail")

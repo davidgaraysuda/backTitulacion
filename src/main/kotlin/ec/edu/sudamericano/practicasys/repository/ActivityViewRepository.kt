@@ -1,6 +1,5 @@
 package ec.edu.sudamericano.practicasys.repository
 
-import ec.edu.sudamericano.practicasys.model.Activity
 import ec.edu.sudamericano.practicasys.model.ActivityView
 import org.springframework.data.jpa.repository.JpaRepository
 

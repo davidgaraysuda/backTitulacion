@@ -1,8 +1,9 @@
 package ec.edu.sudamericano.practicasys.service
 
 import ec.edu.sudamericano.practicasys.model.Tutor
-import ec.edu.sudamericano.practicasys.repository.CompanyRepository
+import ec.edu.sudamericano.practicasys.model.TutorView
 import ec.edu.sudamericano.practicasys.repository.TutorRepository
+import ec.edu.sudamericano.practicasys.repository.TutorViewRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
@@ -14,16 +15,19 @@ class   TutorService {
     lateinit var tutorRepository: TutorRepository
 
     @Autowired
-    lateinit var companyRepository: CompanyRepository
+    lateinit var tutorViewRepository: TutorViewRepository
 
 
     fun list(): List<Tutor> {
-
         return tutorRepository.findAll()
     }
 
     fun listById (id:Long?): Tutor?{
         return tutorRepository.findById(id)
+    }
+
+    fun listTutorFull (): List<TutorView>{
+        return tutorViewRepository.findAll()
     }
 
     fun save(tutor:Tutor):Tutor{

@@ -1,12 +1,9 @@
 package ec.edu.sudamericano.practicasys.service
 
-import ec.edu.sudamericano.practicasys.model.Carrera
 import ec.edu.sudamericano.practicasys.model.Company
 import ec.edu.sudamericano.practicasys.model.CompanyView
-import ec.edu.sudamericano.practicasys.model.Student
 import ec.edu.sudamericano.practicasys.repository.CompanyRepository
 import ec.edu.sudamericano.practicasys.repository.CompanyViewRepository
-import ec.edu.sudamericano.practicasys.repository.StudentRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

@@ -1,4 +1,4 @@
-package net.magbdigital.sudapractic.dto
+package ec.edu.sudamericano.practicasys.dto
 
 class PracticeReportDto (
     var startDate: String? = "",

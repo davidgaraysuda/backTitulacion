@@ -1,7 +1,6 @@
-package net.magbdigital.sudapractic.dto
+package ec.edu.sudamericano.practicasys.dto
 
-import net.magbdigital.sudapractic.model.ActivityDetailView
-import java.util.Date
+import ec.edu.sudamericano.practicasys.model.ActivityDetailView
 
 class PracticeDetailDto (
         var currentDate: String? = "",
@@ -11,4 +10,4 @@ class PracticeDetailDto (
         var activityDetails: List<ActivityDetailView> = ArrayList(),
         var observations: String? = "",
 
-)
+        )

@@ -1,11 +1,8 @@
 package ec.edu.sudamericano.practicasys.controller
 
-import ec.edu.sudamericano.practicasys.model.Carrera
 import ec.edu.sudamericano.practicasys.model.Company
 import ec.edu.sudamericano.practicasys.model.CompanyView
-import ec.edu.sudamericano.practicasys.model.Student
 import ec.edu.sudamericano.practicasys.service.CompanyService
-import ec.edu.sudamericano.practicasys.service.StudentService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.bind.annotation.DeleteMapping

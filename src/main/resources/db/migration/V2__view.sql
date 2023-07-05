@@ -1,7 +1,7 @@
-CREATE VIEW company_view as
-    select c.*,t.name tutor
-    from company c JOIN tutor t
-    ON c.tutor_id = t.id;
+CREATE VIEW tutor_view as
+    select tu.*,c.name company
+    from tutor tu JOIN company c
+    ON tu.company_id = c.id;
 
 CREATE VIEW student_view as
     select s.*,ca.name career
@@ -14,12 +14,11 @@ CREATE VIEW student_view as
     ON ac.career_id=c.id;
 
 CREATE VIEW practice_view as
-    select  p.*,s.name estudiante , t.name profesor, tu.name tutor,st.lastname apellido, ac.description
+    select  p.*,s.name estudiante , t.name profesor, tu.name tutor,st.lastname apellido
     from practice p JOIN teacher t ON p.teacher_id =t.id
                     JOIN tutor tu ON p.tutor_id =tu.id
                     JOIN student s ON p.student_id =s.id
-                    JOIN student st ON p.student_id=st.id
-                    JOIN activity ac ON p.activity_id=ac.id;
+                    JOIN student st ON p.student_id=st.id;
 
 CREATE VIEW activity_detail_view as
   select ad.*,a.description actividad
@@ -35,10 +34,9 @@ from teacher te JOIN career ca
                   ON te.career_id = ca.id;
 
 CREATE VIEW specific_view as
-select  sp.*, ag.company_id company, ca.name career, te.name teacher
-from specific_agreement sp JOIN agreement ag ON sp.agreement_id =ag.id
+select  sp.*, ag.company company, ca.name career
+from specific_agreement sp JOIN agreement_view ag ON sp.agreement_id = ag.id
                            JOIN career ca ON sp.career_id=ca.id
-                           JOIN teacher te ON sp.teacher_id=te.id
 
 
 

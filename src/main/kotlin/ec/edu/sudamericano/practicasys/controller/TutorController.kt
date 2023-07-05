@@ -1,6 +1,8 @@
 package ec.edu.sudamericano.practicasys.controller
 
+import ec.edu.sudamericano.practicasys.model.TeacherView
 import ec.edu.sudamericano.practicasys.model.Tutor
+import ec.edu.sudamericano.practicasys.model.TutorView
 import ec.edu.sudamericano.practicasys.service.TutorService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
@@ -20,6 +22,11 @@ class TutorController {
     @GetMapping("/{id}")
     fun listById (@PathVariable("id") id: Long): Tutor?{
         return tutorService.listById(id)
+    }
+
+    @GetMapping("/with/company")
+    fun listTutorFull (): List<TutorView>{
+        return tutorService.listTutorFull()
     }
 
     @PostMapping

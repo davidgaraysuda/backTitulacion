@@ -1,7 +1,9 @@
 package ec.edu.sudamericano.practicasys.controller
 
 import ec.edu.sudamericano.practicasys.*
-import ec.edu.sudamericano.practicasys.AgreementService
+import ec.edu.sudamericano.practicasys.model.Agreement
+import ec.edu.sudamericano.practicasys.model.AgreementView
+import ec.edu.sudamericano.practicasys.service.AgreementService
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*

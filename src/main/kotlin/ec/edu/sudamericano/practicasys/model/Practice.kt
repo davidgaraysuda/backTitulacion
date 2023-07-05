@@ -1,7 +1,7 @@
 package ec.edu.sudamericano.practicasys.model
 
 import java.util.*
-import javax.persistence.*
+import jakarta.persistence.*
 
 @Entity
 @Table(name="practice")

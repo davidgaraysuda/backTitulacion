@@ -1,7 +1,6 @@
 package ec.edu.sudamericano.practicasys.service
 
 import ec.edu.sudamericano.practicasys.model.*
-import ec.edu.sudamericano.practicasys.repository.StudentRepository
 import ec.edu.sudamericano.practicasys.repository.TeacherRepository
 import ec.edu.sudamericano.practicasys.repository.TeacherViewRepository
 import org.springframework.beans.factory.annotation.Autowired

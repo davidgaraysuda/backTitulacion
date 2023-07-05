@@ -1,7 +1,6 @@
 package ec.edu.sudamericano.practicasys.model
 
-import java.sql.Date
-import javax.persistence.*
+import jakarta.persistence.*
 
 @Entity
 @Table(name="company_view")
