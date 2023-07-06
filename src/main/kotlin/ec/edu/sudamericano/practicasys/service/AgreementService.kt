@@ -28,9 +28,9 @@ class AgreementService {
 
     fun reportsAgreement():AgreementReportsDto{
         val response= AgreementReportsDto().apply {
-            expired= agreementRepository.countAgreements()
-            //soon=agreementRepository.getTotalSoon()
-            //current=agreementRepository.getTotalCurrents()
+            expired= agreementRepository.getTotalExpired()
+            soon=agreementRepository.getTotalSoon()
+            current=agreementRepository.getTotalCurrent()
         }
         return response
     }

@@ -6,10 +6,10 @@ import org.springframework.data.jpa.repository.Query
 
 interface AgreementRepository: JpaRepository<Agreement, Long?> {
     fun findById(id: Long?): Agreement?
-    @Query("select count(a) from agreement a where extract(day from(a.end_date-now()))<90")
-    fun countAgreements():Long
-    //@Query("select count(a) from agreement extract(day from(a.end_date-now()))>0")
-    //fun getTotalExpired():Long
-    //@Query("select count(*) from agreement where extract(day from(end_date-now()))<0")
-    //fun getTotalSoon():Long
+    @Query(value="select count(a) from agreement a where extract(day from(end_date-now()))<90 and extract(day from(end_date-now()))>1", nativeQuery = true)
+    fun getTotalSoon():Long
+    @Query(value="select count(a) from agreement a where extract(day from(a.end_date-now()))>0", nativeQuery = true)
+    fun getTotalCurrent():Long
+    @Query(value="select count(*) from agreement a where extract(day from(end_date-now()))<0", nativeQuery = true)
+    fun getTotalExpired():Long
 }

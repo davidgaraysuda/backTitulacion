@@ -1,6 +1,8 @@
 package ec.edu.sudamericano.practicasys.controller
 
 import ec.edu.sudamericano.practicasys.model.*
+import ec.edu.sudamericano.practicasys.model.dto.AgreementReportsDto
+import ec.edu.sudamericano.practicasys.model.dto.SpecificReportsDto
 import ec.edu.sudamericano.practicasys.service.SpecificService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
@@ -27,6 +29,35 @@ class SpecificController {
         return specificService.listById(id)
     }
 
+    @GetMapping("/reports/software")
+    fun reportsSoftware(): SpecificReportsDto {
+        return specificService.reportsSpecificSoftware()
+    }
+
+    @GetMapping("/reports/desing")
+    fun reportsDesing(): SpecificReportsDto {
+        return specificService.reportsSpecificDesing()
+    }
+
+    @GetMapping("/reports/nursing")
+    fun reportsNursing(): SpecificReportsDto {
+        return specificService.reportsSpecificNursing()
+    }
+
+    @GetMapping("/reports/gastronomy")
+    fun reportsGastronomy(): SpecificReportsDto {
+        return specificService.reportsSpecificGastronomy()
+    }
+
+    @GetMapping("/reports/tourism")
+    fun reportsTourism(): SpecificReportsDto {
+        return specificService.reportsSpecificTourism()
+    }
+
+    @GetMapping("/reports/marketing")
+    fun reportsMarketing(): SpecificReportsDto {
+        return specificService.reportsSpecificMarketing()
+    }
 
     @PostMapping
     fun save(@RequestBody specific:Specific):Specific{
