@@ -3,6 +3,8 @@ package ec.edu.sudamericano.practicasys.controller
 import ec.edu.sudamericano.practicasys.*
 import ec.edu.sudamericano.practicasys.model.Agreement
 import ec.edu.sudamericano.practicasys.model.AgreementView
+import ec.edu.sudamericano.practicasys.model.AgreementViewCurrent
+import ec.edu.sudamericano.practicasys.model.AgreementViewExpired
 import ec.edu.sudamericano.practicasys.model.dto.AgreementReportsDto
 import ec.edu.sudamericano.practicasys.service.AgreementService
 
@@ -27,6 +29,16 @@ class AgreementController {
         return agreementService.listFull()
     }
 
+    @GetMapping("/current")
+    fun listCurrent(): List<AgreementViewCurrent>{
+        return agreementService.listCurrent()
+    }
+
+    @GetMapping("/expired")
+    fun listExpired(): List<AgreementViewExpired>{
+        return agreementService.listExpired()
+    }
+
     @GetMapping("/reports")
     fun reportsAgreement(): AgreementReportsDto{
         return agreementService.reportsAgreement()
@@ -36,6 +48,7 @@ class AgreementController {
     fun listById (@PathVariable("id") id: Long): Agreement?{
         return agreementService.listById(id)
     }
+
 
     @PostMapping
     fun save(@RequestBody agreement: Agreement):Agreement{

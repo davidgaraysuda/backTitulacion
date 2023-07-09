@@ -16,7 +16,7 @@ spring:
     schemas: public
 
   datasource:
-    url: jdbc:postgresql://tuffi.db.elephantsql.com:5432/vrmjmlej?socketTimeout=3
+    url: jdbc:postgresql://tuffi.db.elephantsql.com:5432/vrmjmlej?socketTimeout=30
     username: vrmjmlej
     password: sVy7-ovDFSZHO43YjRklEMfcbt3HoKWR
     driverClassName: org.postgresql.Driver

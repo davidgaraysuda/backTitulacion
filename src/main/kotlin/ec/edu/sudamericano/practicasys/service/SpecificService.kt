@@ -1,11 +1,8 @@
 package ec.edu.sudamericano.practicasys.service
 
-import ec.edu.sudamericano.practicasys.model.Specific
-import ec.edu.sudamericano.practicasys.model.SpecificView
-import ec.edu.sudamericano.practicasys.model.dto.AgreementReportsDto
+import ec.edu.sudamericano.practicasys.model.*
 import ec.edu.sudamericano.practicasys.model.dto.SpecificReportsDto
-import ec.edu.sudamericano.practicasys.repository.SpecificRepository
-import ec.edu.sudamericano.practicasys.repository.SpecificViewRepository
+import ec.edu.sudamericano.practicasys.repository.*
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
@@ -15,6 +12,10 @@ class SpecificService {
     lateinit var specificRepository: SpecificRepository
     @Autowired
     lateinit var specificViewRepository: SpecificViewRepository
+    @Autowired
+    lateinit var specificViewCurrentRepository: SpecificViewCurrentRepository
+    @Autowired
+    lateinit var specificViewExpiredRepository: SpecificViewExpiredRepository
 
 
     fun list(): List<Specific> {
@@ -25,6 +26,19 @@ class SpecificService {
     fun listSpecific (): List<SpecificView>{
         return specificViewRepository.findAll()
     }
+
+    fun listByCareer (career:String?): List<SpecificViewCurrent>{
+        return specificViewCurrentRepository.findByCareer(career)
+    }
+
+    fun listSpecificCurrent (): List<SpecificViewCurrent>{
+        return specificViewCurrentRepository.findAll()
+    }
+
+    fun listSpecificExpired (): List<SpecificViewExpired>{
+        return specificViewExpiredRepository.findAll()
+    }
+
 
     fun listById (id:Long?): Specific?{
         return specificRepository.findById(id)

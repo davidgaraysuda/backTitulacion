@@ -2,8 +2,12 @@ package ec.edu.sudamericano.practicasys.service
 
 import ec.edu.sudamericano.practicasys.model.Agreement
 import ec.edu.sudamericano.practicasys.model.AgreementView
+import ec.edu.sudamericano.practicasys.model.AgreementViewCurrent
+import ec.edu.sudamericano.practicasys.model.AgreementViewExpired
 import ec.edu.sudamericano.practicasys.model.dto.AgreementReportsDto
 import ec.edu.sudamericano.practicasys.repository.AgreementRepository
+import ec.edu.sudamericano.practicasys.repository.AgreementViewCurrentRepository
+import ec.edu.sudamericano.practicasys.repository.AgreementViewExpiredRepository
 import ec.edu.sudamericano.practicasys.repository.AgreementViewRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -14,6 +18,10 @@ class AgreementService {
     lateinit var agreementRepository: AgreementRepository
     @Autowired
     lateinit var agreementViewRepository: AgreementViewRepository
+    @Autowired
+    lateinit var agreementViewCurrentRepository: AgreementViewCurrentRepository
+    @Autowired
+    lateinit var agreementViewExpiredRepository: AgreementViewExpiredRepository
 
     fun list(): List<Agreement> {
         return agreementRepository.findAll()
@@ -22,8 +30,17 @@ class AgreementService {
         return agreementRepository.findById(id)
     }
 
+
     fun listFull(): List<AgreementView> {
         return agreementViewRepository.findAll()
+    }
+
+    fun listCurrent(): List<AgreementViewCurrent> {
+        return agreementViewCurrentRepository.findAll()
+    }
+
+    fun listExpired(): List<AgreementViewExpired> {
+        return agreementViewExpiredRepository.findAll()
     }
 
     fun reportsAgreement():AgreementReportsDto{

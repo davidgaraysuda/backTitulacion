@@ -24,9 +24,24 @@ class SpecificController {
     fun listSpecificFull (): List<SpecificView>{
         return specificService.listSpecific()
     }
+
+    @GetMapping("/current")
+    fun listSpecificCurrent (): List<SpecificViewCurrent>{
+        return specificService.listSpecificCurrent()
+    }
+
+    @GetMapping("/expired")
+    fun listSpecificExpired (): List<SpecificViewExpired>{
+        return specificService.listSpecificExpired()
+    }
     @GetMapping("/{id}")
     fun listById (@PathVariable("id") id: Long): Specific?{
         return specificService.listById(id)
+    }
+
+    @GetMapping("/current/{career}")
+    fun listByCareer (@PathVariable("career") career: String?): List<SpecificViewCurrent>{
+        return specificService.listByCareer(career)
     }
 
     @GetMapping("/reports/software")
