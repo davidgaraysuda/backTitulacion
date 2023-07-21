@@ -53,6 +53,9 @@ class AgreementService {
     }
 
     fun save(agreement : Agreement ):Agreement {
+        agreement.apply {
+            agStatus=true
+        }
         return agreementRepository.save(agreement )
     }
 

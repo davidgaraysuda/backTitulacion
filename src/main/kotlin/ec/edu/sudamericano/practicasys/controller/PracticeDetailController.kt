@@ -18,6 +18,12 @@ class PracticeDetailController {
     fun list(): List<PracticeDetail>{
         return practiceDetailService.list()
     }
+
+    @GetMapping
+    fun listFull(): List<PracticeDetailView>{
+        return practiceDetailService.listFull()
+    }
+
     @GetMapping("/{id}")
     fun listById (@PathVariable("id") id: Long): PracticeDetail?{
         return practiceDetailService.listById(id)

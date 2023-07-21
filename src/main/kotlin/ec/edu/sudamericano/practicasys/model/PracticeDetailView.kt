@@ -1,12 +1,11 @@
 package ec.edu.sudamericano.practicasys.model
 
-import java.sql.Time
 import java.util.*
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "practice_detail")
-class PracticeDetail {
+@Table(name = "practice_detail_view")
+class PracticeDetailView {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(updatable = false)
@@ -26,6 +25,6 @@ class PracticeDetail {
 
     @Column(name = "practice_id")
     var practiceId: Long? = null
-
-
+    var estudiante:String?=null
+    var company:String?=null
 }

@@ -100,7 +100,7 @@ class SpecificService {
 
     fun save(specific:Specific):Specific{
         specific.apply {
-            sagStatus=specific.sagStatus
+            sagStatus=true
         }
         return specificRepository.save(specific)
     }

@@ -14,5 +14,4 @@ class ActivityView {
     var careerId: Long? = null
     var carrera:String?=null
 
-
 }

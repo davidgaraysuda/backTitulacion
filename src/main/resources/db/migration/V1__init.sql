@@ -5,16 +5,13 @@ CREATE TABLE IF NOT EXISTS career(
     PRIMARY KEY (id)
 );
 
-CREATE TYPE state AS ENUM ('todo', 'doing', 'done');
-
 CREATE TABLE IF NOT EXISTS  student(
     id serial,
-    nui VARCHAR(13) NOT NULL UNIQUE,
+    nui VARCHAR(15) NOT NULL UNIQUE,
     name VARCHAR(45) NOT NULL,
     lastname VARCHAR(45) NOT NULL,
-    email VARCHAR(45) NOT NULL UNIQUE,
-    phone VARCHAR(12) NOT NULL UNIQUE,
-    s_state state,
+    email VARCHAR(45) NOT NULL,
+    phone VARCHAR(12) NOT NULL,
     career_id INT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (career_id) references career (id)
@@ -80,9 +77,9 @@ CREATE TABLE IF NOT EXISTS  practice(
 CREATE TABLE IF NOT EXISTS practice_detail(
     id serial,
     actual_date date not null,
-    start_time time NOT NULL,
-    end_time time NOT NULL,
-    total_hours time,
+    start_time varchar (200),
+    end_time varchar (200),
+    total_hours int,
     observations varchar (200),
     practice_id int,
     PRIMARY KEY (id),

@@ -41,9 +41,6 @@ lateinit var activityDetailViewRepository: ActivityDetailViewRepository
     }
 
     fun save(student: Student): Student {
-        student.apply {
-            nui = String()
-        }
         return studentRepository.save(student)
     }
 

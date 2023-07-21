@@ -54,7 +54,6 @@ class PracticeService {
         val student = studentService.listById(practice?.studentId)
         val teacher = teacherService.listById(practice?.teacherId)
         val tutor= tutorService.listById(practice?.tutorId)
-        val activity= activityService.listById(practice?.activityId)
 
         response.apply {
             var simpleDateFormat = SimpleDateFormat("LLLL")
@@ -65,7 +64,6 @@ class PracticeService {
             studentName=student?.name + ' ' +student?.lastname
             teacherName=teacher?.name
             tutorName=tutor?.name
-            activityName=activity?.description
             practiceDetails=practiceDetailService.listDetailByPracticeToDto(id,dateStartFormat,dateEndFormat)
         }
         return response

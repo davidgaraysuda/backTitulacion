@@ -16,15 +16,13 @@ class Practice {
     var endDate:Date? = null
     @Column(name = "pra_status")
     var praStatus: Boolean? = null
-
+    var hours:Long?=null
     @Column(name = "student_id")
     var studentId:Long? = null
     @Column(name = "tutor_id")
     var tutorId:Long? = null
     @Column(name = "teacher_id")
     var teacherId:Long? = null
-    @Column(name = "activity_id")
-    var activityId:Long? = null
 
 
 }

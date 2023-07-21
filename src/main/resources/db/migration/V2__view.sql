@@ -20,6 +20,11 @@ CREATE VIEW practice_view as
                     JOIN student s ON p.student_id =s.id
                     JOIN student st ON p.student_id=st.id;
 
+CREATE VIEW practice_detail_view as
+    select pd.*, pra.estudiante, tu.company
+    from practice_detail pd join practice_view pra on pd.practice_id=pra.student_id
+                            join tutor_view tu on pra.tutor_id=tu.id;
+
 CREATE VIEW activity_detail_view as
   select ad.*,a.description actividad
  from activity_detail ad JOIN activity a ON ad.activities_id = a.id;

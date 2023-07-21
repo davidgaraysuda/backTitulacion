@@ -29,7 +29,7 @@ class CompanyService {
 
     fun save(company:Company):Company{
         company.apply {
-            coStatus=company.coStatus
+            coStatus=true
         }
         return companyRepository.save(company)
     }

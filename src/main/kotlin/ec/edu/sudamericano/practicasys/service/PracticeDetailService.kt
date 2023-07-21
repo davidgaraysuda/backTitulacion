@@ -2,7 +2,9 @@ package ec.edu.sudamericano.practicasys.service
 
 import ec.edu.sudamericano.practicasys.dto.PracticeDetailDto
 import ec.edu.sudamericano.practicasys.model.PracticeDetail
+import ec.edu.sudamericano.practicasys.model.PracticeDetailView
 import ec.edu.sudamericano.practicasys.repository.PracticeDetailRepository
+import ec.edu.sudamericano.practicasys.repository.PracticeDetailViewRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.text.SimpleDateFormat
@@ -12,11 +14,17 @@ import java.time.LocalDate
 class PracticeDetailService {
     @Autowired
     lateinit var practiceDetailRepository: PracticeDetailRepository
+    @Autowired
+    lateinit var practiceDetailViewRepository: PracticeDetailViewRepository
 
     @Autowired
     lateinit var activityDetailService: ActivityDetailService
     fun list(): List<PracticeDetail> {
         return practiceDetailRepository.findAll()
+    }
+
+    fun listFull(): List<PracticeDetailView> {
+        return practiceDetailViewRepository.findAll()
     }
 
     fun listDetailByPractice (practiceId:Long): List<PracticeDetail>{

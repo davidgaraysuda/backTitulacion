@@ -37,7 +37,7 @@ class   TutorService {
                     ?: throw Exception("Nombre no debe ser vacio")
 
             tutor.apply {
-                tuStatus=tutor.tuStatus
+                tuStatus=true
             }
             return tutorRepository.save(tutor)
         }
