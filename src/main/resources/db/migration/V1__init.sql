@@ -1,3 +1,13 @@
+CREATE TABLE IF NOT EXISTS users(
+    id SERIAL,
+    firstname VARCHAR(50),
+    lastname VARCHAR(50),
+    email VARCHAR(50),
+    password VARCHAR(250),
+    role VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
 CREATE TABLE IF NOT EXISTS career(
     id serial,
     name VARCHAR(50),
@@ -13,8 +23,10 @@ CREATE TABLE IF NOT EXISTS  student(
     email VARCHAR(45) NOT NULL,
     phone VARCHAR(12) NOT NULL,
     career_id INT NOT NULL,
+    user_id INT not null unique,
     PRIMARY KEY (id),
-    FOREIGN KEY (career_id) references career (id)
+    FOREIGN KEY (career_id) references career (id),
+    foreign key (user_id) references users(id)
 );
 
 CREATE TABLE IF NOT EXISTS  company(
@@ -46,8 +58,10 @@ CREATE TABLE IF NOT EXISTS  teacher(
     phone VARCHAR(12),
     te_status BOOLEAN,
     career_id INT,
+    user_id int not null unique,
     PRIMARY KEY (id),
-    FOREIGN KEY (career_id) REFERENCES career (id)
+    FOREIGN KEY (career_id) REFERENCES career (id),
+    foreign key (user_id) references users(id)
 );
 
 

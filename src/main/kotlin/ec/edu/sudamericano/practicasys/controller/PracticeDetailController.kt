@@ -14,10 +14,6 @@ class PracticeDetailController {
     @Autowired
     lateinit var practiceDetailService: PracticeDetailService
 
-    @GetMapping
-    fun list(): List<PracticeDetail>{
-        return practiceDetailService.list()
-    }
 
     @GetMapping
     fun listFull(): List<PracticeDetailView>{
