@@ -9,6 +9,10 @@ plugins {
 	kotlin("plugin.jpa") version "1.8.21"
 }
 
+springBoot {
+	mainClass.set("ec.edu.sudamericano.practicasys")
+}
+
 group = "ec.edu.sudamericano"
 version = "0.0.1-SNAPSHOT"
 
