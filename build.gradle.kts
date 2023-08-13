@@ -10,7 +10,7 @@ plugins {
 }
 
 springBoot {
-	mainClass.set("ec.edu.sudamericano.practicasys")
+	mainClass.set("ec.edu.sudamericano.practicasys.PracticasysApplicationKt")
 }
 
 group = "ec.edu.sudamericano"
